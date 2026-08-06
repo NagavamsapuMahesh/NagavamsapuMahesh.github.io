@@ -1,10 +1,472 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>My Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QA Automation Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #65aef7;
+            color: #333333;
+        }
+
+        header {
+            background-color: #1e79f8;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        header p {
+            margin-top: 10px;
+            font-size: 18px;
+            color: #d2d6da;
+        }
+
+        nav {
+            background: #125bf8;
+            padding: 10px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: #d1d5db;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #ffffff;
+        }
+
+        section {
+            padding: 40px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        #about {
+            padding: 40px 20px;
+        }
+
+        .about-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .about-text {
+            flex: 2;
+            font-size: 22px;
+            color: rgb(10, 10, 10);
+            text-shadow: 2px 2px 5px rgba(241, 240, 240, 0.5);
+        }
+
+        .about-image {
+            flex: 1;
+            text-align: right;
+        }
+
+        .about-image img {
+            width: 200px;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(243, 242, 242, 0.3);
+        }
+
+        h2 {
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .skills span {
+            display: inline-block;
+            background: #e5e7eb;
+            margin: 5px;
+            padding: 8px 12px;
+            border-radius: 5px;
+        }
+
+        .project,
+        .job {
+            margin-bottom: 30px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #125bf8;
+            color: #ffffff;
+        }
+
+        .contact a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+
+        /* Slider Styling */
+        .slider-container {
+            position: relative;
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        .project-slide {
+            display: none;
+        }
+
+        .project-slide.active {
+            display: block;
+            animation: fadeIn 0.4s ease-in-out;
+        }
+
+        .qa-details {
+            margin-top: 15px;
+            padding: 10px 15px;
+            background: #f0f7ff;
+            border-left: 4px solid #1e79f8;
+            border-radius: 4px;
+        }
+
+        .slider-controls {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .slider-btn {
+            background-color: #1e79f8;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 14px;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .slider-btn:hover {
+            background-color: #125bf8;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Welcome to My Portfolio</h1>
-    <p>This is my first GitHub Pages website.</p>
+
+    <header>
+        <h1>Nagavamsapu Mahesh</h1>
+        <p>QA Automation Engineer | Dotnet Fullstack Web Developer</p>
+    </header>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#skills-tech">Skills</a>
+        <a href="#experience">Industrial Experience</a>
+        <a href="#projects-it">IT Projects</a>
+        <a href="#projects-other">Other Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="about-container">
+            <div class="about-image">
+                <img src="mypic.jpg" alt="My Photo">
+            </div>
+            <div class="about-text">
+                <p>
+                    Detail-oriented Software Engineer and QA Automation Engineer with experience across
+                    the Software Development Life Cycle (SDLC), including web application design and development,
+                    test automation framework design and development, web and API testing, and CI/CD practices.
+                    Skilled in building reliable web applications and delivering high-quality software through
+                    comprehensive automation and quality assurance.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills-tech">
+        <h2>Technical Skills And Tools</h2>
+        <div class="skills">
+            <span>Selenium</span>
+            <span>Playwright</span>
+            <span>Appium</span>
+            <span>NUnit</span>
+            <span>Cucumber</span>
+            <span>SpecFlow</span>
+            <span>Extend Reporter</span>
+            <span>Allure Reporter</span>
+            <span>Thunderclient</span>
+            <span>Postman</span>
+            <span>CI/CD (Jenkins, Azure)</span>
+            <span>Asp.net Core</span>
+            <span>MVC</span>
+            <span>Razor view</span>
+            <span>React JS</span>
+            <span>PostgreSQL</span>
+            <span>MSQL</span>
+            <span>Node JS</span>
+            <span>JS</span>
+            <span>C#</span>
+            <span>C</span>
+        </div>
+    </section>
+
+    <section id="skills-design">
+        <h2>Designing Skills and Tools</h2>
+        <div class="skills">
+            <span>Adobe Photoshop</span>
+            <span>Adobe Illustrator</span>
+            <span>Figma</span>
+            <span>Balsamiq</span>
+            <span>Canva</span>
+        </div>
+    </section>
+
+    <section id="skills-other">
+        <h2>Other Skills</h2>
+        <div class="skills">
+            <span>Adobe Premier Pro</span>
+            <span>Adobe After Effects</span>
+            <span>Autocad 2D and 3D</span>
+            <span>MS Office</span>
+        </div>
+    </section>
+
+    <section id="experience">
+        <h2>Professional Experience (Industrial Experience)</h2>
+        <div class="job">
+            <h3>Software Engineer – RitePros inc</h3>
+            <p><strong>Duration:</strong> April 2024 – April 2025</p>
+            <p><strong>Product:</strong> RiteCare - Health Care Domain</p>
+            <p><strong>Product:</strong> RiteMaid - On-Demand Home Services Marketplace</p>
+        </div>
+        <div class="job">
+            <h3>Associate Software Developer – Comtronus LLP</h3>
+            <p><strong>Duration:</strong> May 2022 – Nov 2023</p>
+            <p><strong>Product:</strong> Labgen - Medical Domain</p>
+            <p><strong>Product:</strong> Medgen - Medical Domain</p>
+        </div>
+        <div class="job">
+            <h3>UI/UX Developer – Adrav Innovation Pvt Ltd</h3>
+            <p><strong>Duration:</strong> Oct 2021 – Mar 2022</p>
+            <p><strong>Product:</strong> Multiple Products - Enterprises Domain</p>
+        </div>
+        <div class="job">
+            <h3>Junior Programmer – Ambidex Software Solutions</h3>
+            <p><strong>Duration:</strong> Jan 2020 – Aug 2021</p>
+            <p><strong>Products:</strong> Brain Box - Education Domain</p>
+        </div>
+    </section>
+
+    <section id="projects-it">
+        <h2>Freelance - IT Projects [QA and Dev]</h2>
+        <div class="slider-container" id="slider-1">
+            <!-- Project Slide 1 -->
+            <div class="project-slide active">
+                <h2>Category : QA/SDET</h2>
+                <h3>Manual and Automation end to end testing for Milgate android CRM-App</h3>
+                <h4>Client : Hertzworkz pvt ltd</h4>
+                <p>Developed manual report in excel and build end to end automation on that manual report using appium with nunit c#</p>
+                <div class="qa-details">
+                    <p><strong>QA Highlights:</strong> Appium with .net using NUnit, Page Object Model, Data-Driven Approach, Extent Reports, Specflow BDD</p>
+                </div>
+                <p><strong>Duration:</strong> May 2026 - June 2026</p>
+            </div>
+
+            <!-- Project Slide 3 -->
+            <div class="project-slide">
+                <h2>Category : Dev</h2>
+                <h3>Expenditure Tracker</h3>
+                <h4>Client : In person</h4>
+                <p>Designed and developing Expenditure Tracker app using MVC Asp.Net Core</p>
+                <div class="qa-details">
+                    <p><strong>App Highlights:</strong> Designed user interface wireframes in Balsamiq, implemented Razor view pages (.cshtml), and built a JWT-based authentication system backed by Entity Framework for database management.</p>
+                </div>
+                <p><strong>Duration:</strong> Feb 2026 - Till date</p>
+            </div>
+
+            <!-- Project Slide 4 -->
+            <div class="project-slide">
+                <h2>Category : AI Testing</h2>
+                <h3>Project Dynamo</h3>
+                <h4>Client : Handshake AI</h4>
+                <p>Designed and developing the promt related python codes and ensure the LLM should fail</p>
+                <div class="qa-details">
+                    <p><strong>QA Highlights:</strong> Designed custom self-built prompts, developed corresponding test suites, containerized images using Docker, and automated deployment to Harbor via GitHub Actions on a Linux Ubuntu environment integrated with an LLM.</p>
+                </div>
+                <p><strong>Duration:</strong> July 2026 - Till date</p>
+            </div>
+
+            <!-- Project Slide 5 -->
+            <div class="project-slide">
+                <h2>Category : QA/SDET</h2>
+                <h3>Aligned manual report in Jira Xray and build end to end automation in Playwright NodeJS</h3>
+                <h4>Client : Cashbook</h4>
+                <p>Created an end-to-end web automation and delivered BDD report with Cucumber and Allure reporter</p>
+                <div class="qa-details">
+                    <p><strong>QA Highlights:</strong> Cross-browser testing, Generating Allure Reports in Xray in Jira</p>
+                </div>
+                <p><strong>Duration:</strong> Sept 2020 - Feb 2021</p>
+            </div>
+
+            <!-- Navigation Buttons -->
+            <div class="slider-controls">
+                <button class="slider-btn prev-btn" onclick="moveSlide('slider-1', -1)">&#10094; Previous</button>
+                <button class="slider-btn next-btn" onclick="moveSlide('slider-1', 1)">Next &#10095;</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects-other">
+        <h2>Other Freelance Projects</h2>
+        <div class="slider-container" id="slider-2">
+            <!-- Project Slide 1 -->
+            <div class="project-slide active">
+                <h2>Category : DataEntry</h2>
+                <h3>Build Annotations and Captions for videos</h3>
+                <h4>Client : In persion</h4>
+                <p>Build Annotations and write matched description and conversations between time frames as per the contents in the video</p>
+                <div class="qa-details">
+                    <p><strong>Tools used:</strong> Canva and photoshop</p>
+                </div>
+                <p><strong>Duration:</strong> Aug 2026 - till date</p>
+            </div>
+
+            <!-- Project Slide 2 -->
+            <div class="project-slide">
+                <h2>Category : Video - Image Editing</h2>
+                <h3>Creating Insta Social Media Posts</h3>
+                <h4>Client : Barath Constructions</h4>
+                <p>Created sale related social media posts using Canva and Adobe suites</p>
+                <div class="qa-details">
+                    <p><strong>Tools used:</strong> Adobe Premiere Pro, After Effects, Photoshop, and Canva</p>
+                </div>
+                <p><strong>Duration:</strong> Mar 2026 - July 2026</p>
+            </div>
+
+            <!-- Project Slide 3 -->
+            <div class="project-slide">
+                <h2>Category : Design</h2>
+                <h3>Building Karshma Albums as per the client requirement</h3>
+                <h4>Client : In persion</h4>
+                <p>created high quality pictures and editing the existing high-quality images into bueatiful crafted albums</p>
+                <div class="qa-details">
+                    <p><strong>Tools used:</strong> Canva and photoshop</p>
+                </div>
+                <p><strong>Duration:</strong> Jun 2026 - Jun 2026</p>
+            </div>
+
+            <!-- Project Slide 4 -->
+            <div class="project-slide">
+                <h2>Category : Design</h2>
+                <h3>Design high quality banners and flexies</h3>
+                <h4>Client : Jaggula Restaurent</h4>
+                <p>Explored local desighn and followup build vector icons and crafting created vector png as bgv that meets their traditions</p>
+                <div class="qa-details">
+                    <p><strong>Tools used:</strong> Adobe - photoshop,illustrator</p>
+                </div>
+                <p><strong>Duration:</strong> Aug 2024 - Aug 2024</p>
+            </div>
+
+            <!-- Navigation Buttons -->
+            <div class="slider-controls">
+                <button class="slider-btn prev-btn" onclick="moveSlide('slider-2', -1)">&#10094; Previous</button>
+                <button class="slider-btn next-btn" onclick="moveSlide('slider-2', 1)">Next &#10095;</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: nagmahesh126@gmail.com</p>
+        <p class="contact">
+            LinkedIn: <a href="https://www.linkedin.com/in/nagavamsapu-mahesh-312a078a/" target="_blank">https://www.linkedin.com/in/nagavamsapu-mahesh-312a078a/</a><br>
+            Phone Number: (+91) 9052588944
+        </p>
+    </section>
+
+    <footer>
+        <p>© 2026 Nagavamsapu Mahesh | QA Automation Portfolio</p>
+    </footer>
+
+    <script>
+        // Track slide indices per slider container
+        const sliderIndices = {};
+
+        function initSliders() {
+            const containers = document.querySelectorAll('.slider-container');
+            containers.forEach(container => {
+                const id = container.id;
+                sliderIndices[id] = 0;
+                updateSliderUI(container);
+            });
+        }
+
+        function moveSlide(sliderId, step) {
+            const container = document.getElementById(sliderId);
+            const slides = container.querySelectorAll('.project-slide');
+            
+            slides[sliderIndices[sliderId]].classList.remove('active');
+            
+            sliderIndices[sliderId] = (sliderIndices[sliderId] + step + slides.length) % slides.length;
+            
+            slides[sliderIndices[sliderId]].classList.add('active');
+            updateSliderUI(container);
+        }
+
+        function updateSliderUI(container) {
+            const id = container.id;
+            const currentIndex = sliderIndices[id];
+            const slides = container.querySelectorAll('.project-slide');
+            const prevBtn = container.querySelector('.prev-btn');
+            const nextBtn = container.querySelector('.next-btn');
+
+            if (currentIndex === 0) {
+                prevBtn.disabled = true;
+                prevBtn.style.opacity = "0.5";
+                prevBtn.style.cursor = "not-allowed";
+            } else {
+                prevBtn.disabled = false;
+                prevBtn.style.opacity = "1";
+                prevBtn.style.cursor = "pointer";
+            }
+
+            if (currentIndex === slides.length - 1) {
+                nextBtn.disabled = true;
+                nextBtn.style.opacity = "0.5";
+                nextBtn.style.cursor = "not-allowed";
+            } else {
+                nextBtn.disabled = false;
+                nextBtn.style.opacity = "1";
+                nextBtn.style.cursor = "pointer";
+            }
+        }
+
+        // Initialize sliders on load
+        window.onload = initSliders;
+    </script>
 </body>
 </html>
