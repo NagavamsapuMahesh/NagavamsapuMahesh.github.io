@@ -399,81 +399,38 @@
             </div>
 
             <!-- Navigation Buttons -->
-            <div class="slider-controls">
-                <button class="slider-btn prev-btn" onclick="moveSlide('slider-2', -1)">&#10094; Previous</button>
-                <button class="slider-btn next-btn" onclick="moveSlide('slider-2', 1)">Next &#10095;</button>
+<div class="slider-controls">
+                <button class="slider-btn prev-btn" onclick="moveSlide('slider-1', -1)">&#10094; Previous</button>
+                <button class="slider-btn next-btn" onclick="moveSlide('slider-1', 1)">Next &#10095;</button>
             </div>
-        </div>
+        </div> <!-- Closing slider-container -->
     </section>
 
     <section id="contact">
         <h2>Contact</h2>
-        <p>Email: nagmahesh126@gmail.com</p>
-        <p class="contact">
-            LinkedIn: <a href="https://www.linkedin.com/in/nagavamsapu-mahesh-312a078a/" target="_blank">https://www.linkedin.com/in/nagavamsapu-mahesh-312a078a/</a><br>
-            Phone Number: (+91) 9052588944
-        </p>
+        <p>Feel free to reach out for collaborations or opportunities!</p>
     </section>
 
     <footer>
-        <p>© 2026 Nagavamsapu Mahesh | QA Automation Portfolio</p>
+        <p>&copy; 2026 Nagavamsapu Mahesh</p>
     </footer>
 
     <script>
-        // Track slide indices per slider container
-        const sliderIndices = {};
+        function moveSlide(containerId, direction) {
+            const container = document.getElementById(containerId);
+            const slides = container.querySelectorAll('.project-slide');
+            let activeIndex = 0;
 
-        function initSliders() {
-            const containers = document.querySelectorAll('.slider-container');
-            containers.forEach(container => {
-                const id = container.id;
-                sliderIndices[id] = 0;
-                updateSliderUI(container);
+            slides.forEach((slide, index) => {
+                if (slide.classList.contains('active')) {
+                    activeIndex = index;
+                }
             });
+
+            slides[activeIndex].classList.remove('active');
+            let newIndex = (activeIndex + direction + slides.length) % slides.length;
+            slides[newIndex].classList.add('active');
         }
-
-        function moveSlide(sliderId, step) {
-            const container = document.getElementById(sliderId);
-            const slides = container.querySelectorAll('.project-slide');
-            
-            slides[sliderIndices[sliderId]].classList.remove('active');
-            
-            sliderIndices[sliderId] = (sliderIndices[sliderId] + step + slides.length) % slides.length;
-            
-            slides[sliderIndices[sliderId]].classList.add('active');
-            updateSliderUI(container);
-        }
-
-        function updateSliderUI(container) {
-            const id = container.id;
-            const currentIndex = sliderIndices[id];
-            const slides = container.querySelectorAll('.project-slide');
-            const prevBtn = container.querySelector('.prev-btn');
-            const nextBtn = container.querySelector('.next-btn');
-
-            if (currentIndex === 0) {
-                prevBtn.disabled = true;
-                prevBtn.style.opacity = "0.5";
-                prevBtn.style.cursor = "not-allowed";
-            } else {
-                prevBtn.disabled = false;
-                prevBtn.style.opacity = "1";
-                prevBtn.style.cursor = "pointer";
-            }
-
-            if (currentIndex === slides.length - 1) {
-                nextBtn.disabled = true;
-                nextBtn.style.opacity = "0.5";
-                nextBtn.style.cursor = "not-allowed";
-            } else {
-                nextBtn.disabled = false;
-                nextBtn.style.opacity = "1";
-                nextBtn.style.cursor = "pointer";
-            }
-        }
-
-        // Initialize sliders on load
-        window.onload = initSliders;
     </script>
 </body>
 </html>
